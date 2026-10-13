@@ -1,3 +1,5 @@
+import './Navbar.css'
+
 export const Navbar = ({ filterCoins }) => {
   return (
     <div className="navbar">

@@ -1,1 +1,1 @@
-export {Coins} from './Coins/Coins'
+export {Coins} from './Coins'

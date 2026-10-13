@@ -1,7 +1,8 @@
-import { Navbar } from './Components'
+import { Navbar } from './Components/Navbar/Navbar'
 import {Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Coins } from './Pages/Coins/Coins'
+import { Coin } from './Pages/Coin/Coin'
 
 export const App = () => {
   const [coins, setCoins] = useState([])
@@ -9,7 +10,6 @@ export const App = () => {
 
   // API endpoints
   const API_ALL_COINS = "https://api.coinpaprika.com/v1/tickers"
-  const API_SINGLE_COIN = "https://api.coinpaprika.com/v1/tickers/"
 
   // Fetch all coins from the API and set the state
   const fetchAllCoins = async () => {
@@ -36,6 +36,7 @@ export const App = () => {
       <Navbar filterCoins={setSearchTerm} />
       <Routes>
         <Route path="/" element={<Coins coins={filteredCoins} />} />
+        <Route path="/coin/:id" element={<Coin coins={coins} />} />
       </Routes>
     </>
   )
