@@ -8,10 +8,18 @@ export const Coins = ({coins}) => {
       <div className="coins">
         {coins.map((coin) => (
           <div key={coin.id} className="coin">
-            <h2>{coin.name}</h2>
-            <p>{coin.symbol}</p>
-            <p>${coin.quotes.USD.price.toFixed(2)}</p>
-            <Link to={`/coin/${coin.id}`}>View Details</Link>
+            <img
+              src={`https://assets.coincap.io/assets/icons/${coin.symbol.toLowerCase()}@2x.png`}
+              alt={coin.symbol}
+              width="32"
+              height="32"
+            />
+            <h2 className="coin-name">{coin.name}</h2>
+            <p className="coin-symbol">{coin.symbol}</p>
+            <p className="coin-price">${coin.quotes.USD.price.toFixed(2)}</p>
+            <Link to={`/coin/${coin.id}`} className="coin-link">
+              View Details
+            </Link>
           </div>
         ))}
       </div>

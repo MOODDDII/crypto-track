@@ -37,6 +37,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Coins coins={filteredCoins} />} />
         <Route path="/coin/:id" element={<Coin coins={coins} />} />
+        <Route path="*" element={<div>Page not found</div>} />
       </Routes>
     </>
   )

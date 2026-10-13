@@ -1,7 +1,7 @@
 .navbar {
-  background-color: #333;
+  background-color: var(--bg-card);
   padding: 1rem;
-  color: #fff;
+  color: var(--text);
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -16,4 +16,13 @@
 .navbar-search {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  outline: none;
+  border: none;
+  background-color: var(--bg-card);
+  color: var(--text);
+}
+
+.navbar-search::placeholder {
+  color: var(--text);
 }

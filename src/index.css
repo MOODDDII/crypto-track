@@ -2,3 +2,25 @@
     margin: 0;
     padding: 0;
 }
+:root {
+  --bg: #0b0f14;
+  --bg-card: #121821;
+  --bg-hover: #1a2332;
+
+  --text: #e6edf3;
+
+  --accent: #3ddc97;
+  --danger: #ff5c5c;
+  --warning: #f0b429;
+
+  --radius: 10px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --font: "Segoe UI", system-ui, sans-serif;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  padding-inline: 1rem;
+}
