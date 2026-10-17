@@ -9,10 +9,12 @@ export const Coin = ({coins}) => {
   }
 
   return (
-    <div className="coin">
-      <h1>{coin.name}</h1>
-      <p>{coin.symbol}</p>
-      <p>${coin.quotes.USD.price.toFixed(2)}</p>
+    <div className="coin-details">
+      <h1>{coin.name} ({coin.symbol})</h1>
+      <p>Price: ${coin.quotes.USD.price.toFixed(2)}</p>
+      <p>Rank: {coin.rank}</p>
+      <p>Market cap: ${coin.quotes.USD.market_cap.toLocaleString()}</p>
+      <p>24h change: {coin.quotes.USD.percent_change_24h}%</p>
     </div>
   )
 }

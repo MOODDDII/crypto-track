@@ -40,3 +40,13 @@
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
+.coin-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.coin-rank {
+  font-size: 1rem;
+  color: var(--warning);
+  margin-left: 0.5rem;
+}

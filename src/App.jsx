@@ -1,6 +1,6 @@
 import { Navbar } from './Components/Navbar/Navbar'
 import {Routes, Route} from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Coins } from './Pages/Coins/Coins'
 import { Coin } from './Pages/Coin/Coin'
 
@@ -23,9 +23,11 @@ export const App = () => {
   }
 
   // Filter coins based on the search term
-  const filteredCoins = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const filteredCoins = useMemo(() => {
+    return coins.filter((coin) =>
+      coin.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  }, [coins, searchTerm])
 
   useEffect(() => {
     fetchAllCoins()
