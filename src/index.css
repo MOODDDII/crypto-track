@@ -23,4 +23,5 @@ body {
   color: var(--text);
   font-family: var(--font);
   padding-inline: 1rem;
+  padding: 0;
 }

@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding-block: 2rem;
 }
 .coin {
   background-color: var(--bg-card);
