@@ -20,10 +20,20 @@ export const Coins = ({coins}) => {
                   e.currentTarget.src = CoinFallback
                 }}
               />
-            <h2 className="coin-rank">#{coin.rank}</h2>
+            <p className="coin-rank">#{coin.rank}</p>
             </div>
-            <h2 className="coin-name">{coin.name}</h2>
-            <p className="coin-price">${coin.quotes?.USD?.price?.toFixed(2) ?? '—'}</p>
+            <p className="coin-name">Name: <span className="coinName">{coin.name}</span></p>
+            <p className="coin-price">Price: <span className="coinPrice">${coin.quotes?.USD?.price?.toFixed(2) ?? '—'}</span></p>
+            <p className="coin-change">
+              Percent Change (24h): 
+              <span className={coin.quotes.USD.percent_change_24h >= 0 ? 'up' : 'down'}>
+                {coin.quotes.USD.percent_change_24h?.toFixed(2)}%
+              </span>
+            </p>
+
+            <p className="coin-mcap">
+              Market Cap: <span className="coinMcap">${(coin.quotes.USD.market_cap / 1e9).toFixed(2)}B</span>
+            </p>
             <Link to={`/coin/${coin.id}`} className="coin-link">
               View Details
             </Link>

@@ -3,34 +3,33 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  padding-block: 2rem;
+  padding-inline: 2rem;
 }
 .coin {
   background-color: var(--bg-card);
   padding: 0.8rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .coins-title {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
   text-align: center;
   margin-block: 2rem;
 }
 .coin-name {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  text-wrap: balance;
 }
 .coin-symbol {
   font-size: 1rem;
-  color: var(--text);
-  margin-bottom: 0.5rem;
 }
 .coin-price {
   font-size: 1rem;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
 }
 .coin-link {
   display: inline-block;
@@ -40,6 +39,7 @@
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 .coin-header {
   display: flex;
@@ -48,6 +48,26 @@
 }
 .coin-rank {
   font-size: 1rem;
-  color: var(--warning);
   margin-left: 0.5rem;
+}
+.coin-mcap {
+  font-size: 0.9rem;
+}
+.coin-percent-change {
+  font-size: 0.9rem;
+}
+.coinMcap {
+  color: var(--accent);
+}
+.coinName {
+  color: var(--warning);
+}
+.coinPrice {
+  color: var(--accent);
+}
+.up {
+  color: var(--accent);
+}
+.down {
+  color: var(--danger);
 }
