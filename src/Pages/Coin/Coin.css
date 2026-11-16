@@ -1,0 +1,129 @@
+.coin-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.coin-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: inherit;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.coin-back:hover {
+  opacity: 1;
+}
+
+/* Header */
+.coin-page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.coin-page-header h1 {
+  margin: 0;
+}
+.coin-symbol {
+  font-size: 0.6em;
+  opacity: 0.6;
+}
+.coin-page-header .coin-rank {
+  margin: 4px 0 0;
+  opacity: 0.65;
+}
+
+/* Price */
+.coin-price-block {
+  margin-bottom: 8px;
+}
+.coin-big-price {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Chart */
+.chart {
+  margin: 24px 0;
+}
+.chart-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.chart-tab {
+  padding: 6px 14px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 20px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.chart-tab:hover {
+  background: rgba(128, 128, 128, 0.12);
+}
+.chart-tab.active {
+  background: rgba(128, 128, 128, 0.25);
+  border-color: rgba(128, 128, 128, 0.6);
+}
+.chart-body {
+  height: 320px;
+}
+.chart-message {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+/* Periods */
+.coin-periods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+
+/* Cards (periods + stats) */
+.coin-period,
+.coin-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(128, 128, 128, 0.1);
+}
+.coin-period span,
+.coin-stats span {
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+/* Stats */
+.coin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+/* Colors */
+.up {
+  color: #16a34a;
+}
+.down {
+  color: #dc2626;
+}
+
+@media (max-width: 480px) {
+  .coin-page {
+    padding-inline: 14px;
+  }
+  .chart-body {
+    height: 240px;
+  }
+}

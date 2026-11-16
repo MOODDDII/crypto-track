@@ -25,10 +25,7 @@ export const Coins = ({coins}) => {
             <p className="coin-name">Name: <span className="coinName">{coin.name}</span></p>
             <p className="coin-price">Price: <span className="coinPrice">${coin.quotes?.USD?.price?.toFixed(2) ?? '—'}</span></p>
             <p className="coin-change">
-              Percent Change (24h): 
-              <span className={coin.quotes.USD.percent_change_24h >= 0 ? 'up' : 'down'}>
-                {coin.quotes.USD.percent_change_24h?.toFixed(2)}%
-              </span>
+              Change (24h): <span className={coin.quotes.USD.percent_change_24h >= 0 ? 'up' : 'down'}>{coin.quotes.USD.percent_change_24h?.toFixed(2)}%</span>
             </p>
 
             <p className="coin-mcap">
