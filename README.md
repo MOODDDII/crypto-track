@@ -4,7 +4,7 @@ A simple and clean cryptocurrency tracker built with React. Browse popular coins
 
 ## 🔗 Live Demo
 
-[Add your live demo link here if deployed]
+[[Link](https://crypto-track-livid.vercel.app/)]
 
 ## ✨ Features
 
